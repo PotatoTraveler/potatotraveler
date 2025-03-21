@@ -4,13 +4,12 @@ import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import InstagramFeed from '@/components/InstagramFeed';
 
 export default function About(): JSX.Element {
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const instagramAccessToken = process.env.INSTAGRAM_ACCESS_TOKEN;
+
   useEffect(() => {
+    console.log(scrolled);
     const handleScroll = (): void => {
       setScrolled(window.scrollY > 50);
     };
@@ -41,10 +40,10 @@ export default function About(): JSX.Element {
               </div>
             </div>
             <div className="md:w-3/5">
-              <h2 className="text-4xl mb-6">Hello, I'm German Rivera De La Torre</h2>
-              <p className="mb-4 text-lg">I'm a travel photographer and storyteller with a passion for capturing diverse landscapes, cultures, and culinary experiences around the world.</p>
-              <p className="mb-4">My journey began seven years ago when I packed a camera and a potato (my peculiar travel companion) and set off to explore the world. Since then, I've visited over 40 countries, documenting breathtaking vistas and intimate cultural moments.</p>
-              <p className="mb-6">What makes my work unique? I photograph my trusty potato in every location I visit, creating a whimsical visual diary that connects diverse landscapes through this humble root vegetable. It's become my signature — a reminder that beauty and wonder can be found everywhere, even in the most ordinary things.</p>
+              <h2 className="text-4xl mb-6">Hello, I&apos;m German Rivera De La Torre</h2>
+              <p className="mb-4 text-lg">I&apos;m a travel photographer and storyteller with a passion for capturing diverse landscapes, cultures, and culinary experiences around the world.</p>
+              <p className="mb-4">My journey began seven years ago when I packed a camera and a potato (my peculiar travel companion) and set off to explore the world. Since then, I&apos;ve visited over 40 countries, documenting breathtaking vistas and intimate cultural moments.</p>
+              <p className="mb-6">What makes my work unique? I photograph my trusty potato in every location I visit, creating a whimsical visual diary that connects diverse landscapes through this humble root vegetable. It&apos;s become my signature — a reminder that beauty and wonder can be found everywhere, even in the most ordinary things.</p>
               <div className="flex gap-4">
                 <a href="#my-work" className="btn">View My Work</a>
                 <a href="/contact" className="btn btn-outline">Get In Touch</a>
@@ -119,7 +118,7 @@ export default function About(): JSX.Element {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl text-center mb-16">What People Say</h2>
@@ -139,30 +138,27 @@ export default function About(): JSX.Element {
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-8 rounded shadow-sm">
-                <div className="text-2xl text-gray-300 mb-4">"</div>
                 <p className="mb-6 italic">{testimonial.quote}</p>
                 <p className="font-medium text-sm">— {testimonial.name}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Instagram Feed Section */}
       <section className="py-20 bg-white">
-        <InstagramFeed accessToken={instagramAccessToken} />
+
       </section>
 
       {/* Contact CTA Section */}
       <section className="py-24 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl mb-6">Let's Work Together</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-10">Interested in collaborating or licensing my work? I'm available for commercial projects, travel assignments, and workshops.</p>
+          <h2 className="text-4xl mb-6">Let&apos;s Work Together</h2>
+          <p className="text-xl max-w-3xl mx-auto mb-10">Interested in collaborating or licensing my work? I&apos;m available for commercial projects, travel assignments, and workshops.</p>
           <Link href="/contact" className="btn bg-white text-gray-900 hover:bg-gray-200">Get In Touch</Link>
         </div>
       </section>
-
-      <Footer />
     </main>
   );
 }

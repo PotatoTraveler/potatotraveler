@@ -101,8 +101,8 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="font-playfair text-3xl font-normal mb-8">About Me</h2>
           <p className="font-montserrat text-lg font-light mb-8">
-            I'm a passionate photographer who loves to capture the beauty of our world. 
-            From bustling city streets to serene natural landscapes, I'm always on the lookout 
+            I&apos;m a passionate photographer who loves to capture the beauty of our world. 
+            From bustling city streets to serene natural landscapes, I&apos;m always on the lookout 
             for that perfect shot that tells a story.
           </p>
           <Link href="/about" className="btn btn-outline">
