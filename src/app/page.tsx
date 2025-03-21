@@ -1,103 +1,143 @@
-import Image from "next/image";
+// app/page.tsx
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  // Gallery items with Unsplash images
+  const galleryItems = [
+    { 
+      id: 1, 
+      title: 'Manila', 
+      image: 'https://images.unsplash.com/photo-1736122094944-da4deea774ab?q=80&w=1470&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+    { 
+      id: 2, 
+      title: 'Chicago', 
+      image: 'https://images.unsplash.com/photo-1672713616626-53c21c1c5748?q=80&w=1473&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+    { 
+      id: 3, 
+      title: 'Mt.Fuji', 
+      image: 'https://images.unsplash.com/photo-1672713616891-2036bb69a7a3?q=80&w=1374&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+    { 
+      id: 4, 
+      title: 'New York', 
+      image: 'https://images.unsplash.com/photo-1672712459037-1cbaaeecd889?q=80&w=1470&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+    { 
+      id: 5, 
+      title: 'Seattle', 
+      image: 'https://images.unsplash.com/photo-1673465179520-03ca24ed0891?q=80&w=1470&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+    { 
+      id: 6, 
+      title: 'Singapore', 
+      image: 'https://images.unsplash.com/photo-1736122080596-f780d47eb1e9?q=80&w=1396&auto=format&fit=crop',
+      category: 'Travel' 
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-screen">
+        <div className="absolute inset-0">
+          <Image 
+            src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1631&auto=format&fit=crop" 
+            alt="Hero Image" 
+            fill 
+            className="object-cover"
+            priority
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="absolute inset-0 flex items-center justify-center text-white">
+          <div className="text-center">
+            <h1 className="font-playfair text-4xl md:text-6xl font-normal mb-4 tracking-wide">POTATO TRAVELER</h1>
+            <p className="font-montserrat text-xl md:text-2xl font-light tracking-wider">Capturing Moments Around the World</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="font-playfair text-3xl font-normal text-center mb-12">Featured Galleries</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {galleryItems.map((item) => (
+            <Link href={`/gallery/${item.id}`} key={item.id} className="gallery-item group">
+              <div className="relative aspect-square overflow-hidden">
+                <Image 
+                  src={item.image} 
+                  alt={item.title} 
+                  fill 
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="gallery-caption">
+                  <div className="text-white">
+                    <h3 className="font-playfair text-xl font-normal">{item.title}</h3>
+                    <p className="font-montserrat text-sm font-light tracking-wider">{item.category}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <Link href="/galleries" className="btn btn-outline">
+            View All Galleries
+          </Link>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-light py-16">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="font-playfair text-3xl font-normal mb-8">About Me</h2>
+          <p className="font-montserrat text-lg font-light mb-8">
+            I'm a passionate photographer who loves to capture the beauty of our world. 
+            From bustling city streets to serene natural landscapes, I'm always on the lookout 
+            for that perfect shot that tells a story.
+          </p>
+          <Link href="/about" className="btn btn-outline">
+            Learn More
+          </Link>
+        </div>
+      </section>
+      
+      {/* Instagram Feed */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="font-playfair text-3xl font-normal text-center mb-12">Follow My Journey</h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[1, 2, 3, 4, 5, 6].map((item) => (
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" key={item} className="block aspect-square overflow-hidden group">
+                <div className="relative h-full w-full">
+                  <Image 
+                    src={`https://source.unsplash.com/random/300x300?travel,${item}`} 
+                    alt={`Instagram Post ${item}`} 
+                    fill 
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="font-montserrat text-sm uppercase tracking-wider hover:text-secondary">
+              @potatotraveler
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
