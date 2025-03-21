@@ -7,6 +7,6 @@ const nextConfig = {
     unoptimized: true,
     domains: ['images.unsplash.com', 'source.unsplash.com'],
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/' : '',
+  basePath: '',
 };
 export default nextConfig;
