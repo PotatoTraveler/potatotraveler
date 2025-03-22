@@ -13,7 +13,7 @@ interface Photo {
 
 export default function Gallery() {
   // Sample photo data - you would replace this with your actual photos
-  const [photos, setPhotos] = useState<Photo[]>([
+  const [photos] = useState<Photo[]>([
     { id: '1', src: '/images/photo1.jpg', alt: 'Mountain landscape', location: 'Swiss Alps' },
     { id: '2', src: '/images/photo2.jpg', alt: 'Beach sunset', location: 'Bali, Indonesia' },
     { id: '3', src: '/images/photo3.jpg', alt: 'City skyline', location: 'Tokyo, Japan' },

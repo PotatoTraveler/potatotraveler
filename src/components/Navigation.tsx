@@ -3,7 +3,6 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,7 +27,6 @@ export default function Navigation() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  const iconBox = 60;
   return (
     <nav className={`site-header fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'scrolled' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

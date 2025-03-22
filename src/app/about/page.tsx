@@ -4,7 +4,6 @@ import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Navigation';
-import InstagramFeed from '@/components/InstagramFeed';
 import FeatureGalleries from '@/components/FeatureGalleries';
 
 export default function About(): JSX.Element {

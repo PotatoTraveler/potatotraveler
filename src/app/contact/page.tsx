@@ -2,7 +2,6 @@
 // pages/contact.tsx
 import { useState, FormEvent } from 'react';
 import Head from 'next/head';
-import Layout from '@/components/Layout';
 import Image from 'next/image';
 
 interface FormData {
@@ -51,14 +50,14 @@ const Contact = () => {
   };
 
   return (
-    <Layout title="Contact | Potato Traveler">
+    <main title="Contact | Potato Traveler">
       <Head>
         <meta name="description" content="Get in touch with Potato Traveler" />
       </Head>
 
       {/* Hero Header */}
       <div className="relative h-96 w-full">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 overflow">
           <Image 
             src="https://images.unsplash.com/photo-1742597548273-d913136bd5cb?q=80&w=1631&auto=format&fit=crop"
             alt="Beautiful travel landscape" 
@@ -73,7 +72,7 @@ const Contact = () => {
             Get In Touch
           </h1>
           <p className="text-xl text-white text-opacity-90 max-w-xl">
-            Have questions about my travels or want to collaborate? I'd love to hear from you.
+            Have questions about my travels or want to collaborate? I&apos;d love to hear from you.
           </p>
         </div>
       </div>
@@ -84,10 +83,10 @@ const Contact = () => {
             
             {/* Left Column - Contact Info */}
             <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="text-4xl font-light mb-6 text-gray-900">Let's Connect</h1>
+              <h1 className="text-4xl font-light mb-6 text-gray-900">Let&apos;s Connect</h1>
               <p className="text-lg text-gray-600 mb-10 max-w-md">
-                I'd love to hear from you! Whether you have a question about my travels,
-                want to collaborate, or just want to say hello, I'm here to chat.
+                I&apos;d love to hear from you! Whether you have a question about my travels,
+                want to collaborate, or just want to say hello, I&apos;m here to chat.
               </p>
               
               <div className="space-y-8 mt-12">
@@ -177,7 +176,7 @@ const Contact = () => {
                 
                 {submitSuccess === true && (
                   <p className="mt-4 text-green-600">
-                    Thank you! Your message has been sent. I'll get back to you soon.
+                    Thank you! Your message has been sent. I&apos;ll get back to you soon.
                   </p>
                 )}
                 
@@ -191,7 +190,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </main>
   );
 };
 

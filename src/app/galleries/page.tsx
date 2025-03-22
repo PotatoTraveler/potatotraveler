@@ -2,7 +2,6 @@
 // pages/index.tsx
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Head from 'next/head';
 
 // Define the type for our photo data
 interface Photo {
@@ -16,7 +15,7 @@ interface Photo {
 
 export default function Gallery() {
   // Photo data using Unsplash images
-  const [photos, setPhotos] = useState<Photo[]>([
+  const [photos] = useState<Photo[]>([
     {
       id: '1',
       src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
@@ -135,7 +134,7 @@ export default function Gallery() {
 
   // Navigate to next/previous photo
   const navigatePhoto = (direction: 'next' | 'prev') => {
-    let newIndex = direction === 'next'
+    const newIndex = direction === 'next'
       ? (currentIndex + 1) % photos.length
       : (currentIndex - 1 + photos.length) % photos.length;
 
