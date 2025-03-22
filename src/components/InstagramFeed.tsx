@@ -6,7 +6,7 @@ interface InstagramFeedProps {
   accessToken: string;
 }
 
-const InstagramFeed = ({ }: InstagramFeedProps) => {
+const InstagramFeed = ({ accessToken }: InstagramFeedProps) => {
   const [media, setMedia] = useState<InstagramMedia[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
