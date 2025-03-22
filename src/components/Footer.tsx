@@ -25,7 +25,7 @@ export default function Footer() {
                 <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
               </svg>
             </a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-primary hover:text-secondary transition-colors duration-300">
+            <a href="https://www.pinterest.com/potatotraveler/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-primary hover:text-secondary transition-colors duration-300">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 0a12 12 0 0 0-4.373 23.178c-.035-.87-.065-2.204.014-3.154.071-.854.456-2.437.456-2.437s-.116-.297-.116-.736c0-.691.4-1.205.897-1.205.424 0 .628.318.628.7 0 .424-.271 1.058-.41 1.646-.117.49.247.888.731.888.878 0 1.552-.926 1.552-2.261 0-1.181-.845-2.01-2.056-2.01-1.398 0-2.22 1.052-2.22 2.144 0 .424.159.879.358 1.128.039.049.045.091.033.141-.036.15-.117.472-.133.537-.021.088-.07.106-.162.064-.602-.282-.976-1.165-.976-1.875 0-1.555 1.128-2.984 3.255-2.984 1.711 0 3.043 1.218 3.043 2.845 0 1.699-1.071 3.066-2.566 3.066-.502 0-.973-.262-1.133-.571l-.308 1.175c-.111.424-.41 1.136-.611 1.522.459.141.943.217 1.446.217 2.761 0 5-2.239 5-5 0-2.762-2.239-5-5-5z" />
               </svg>

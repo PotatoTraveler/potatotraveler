@@ -6,7 +6,7 @@ interface InstagramFeedProps {
   accessToken: string;
 }
 
-const InstagramFeed = ({ accessToken }: InstagramFeedProps) => {
+const InstagramFeed = ({ }: InstagramFeedProps) => {
   const [media, setMedia] = useState<InstagramMedia[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -31,7 +31,7 @@ const InstagramFeed = ({ accessToken }: InstagramFeedProps) => {
     };
 
     fetchMedia();
-  }, [accessToken]);
+  }, []);
 
   if (loading) return <div>Loading Instagram feed...</div>;
   if (error) return <div>Error: {error}</div>;

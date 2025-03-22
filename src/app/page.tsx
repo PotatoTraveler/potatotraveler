@@ -1,55 +1,17 @@
 // app/page.tsx
+import FeatureGalleries from '@/components/FeatureGalleries';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   // Gallery items with Unsplash images
-  const galleryItems = [
-    { 
-      id: 1, 
-      title: 'Manila', 
-      image: 'https://images.unsplash.com/photo-1736122094944-da4deea774ab?q=80&w=1470&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-    { 
-      id: 2, 
-      title: 'Chicago', 
-      image: 'https://images.unsplash.com/photo-1672713616626-53c21c1c5748?q=80&w=1473&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-    { 
-      id: 3, 
-      title: 'Mt.Fuji', 
-      image: 'https://images.unsplash.com/photo-1672713616891-2036bb69a7a3?q=80&w=1374&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-    { 
-      id: 4, 
-      title: 'New York', 
-      image: 'https://images.unsplash.com/photo-1672712459037-1cbaaeecd889?q=80&w=1470&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-    { 
-      id: 5, 
-      title: 'Seattle', 
-      image: 'https://images.unsplash.com/photo-1673465179520-03ca24ed0891?q=80&w=1470&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-    { 
-      id: 6, 
-      title: 'Singapore', 
-      image: 'https://images.unsplash.com/photo-1736122080596-f780d47eb1e9?q=80&w=1396&auto=format&fit=crop',
-      category: 'Travel' 
-    },
-  ];
-
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0">
           <Image 
-            src="https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1631&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1742597548273-d913136bd5cb?q=80&w=1631&auto=format&fit=crop" 
             alt="Hero Image" 
             fill 
             className="object-cover"
@@ -66,34 +28,7 @@ export default function Home() {
 
       {/* Gallery Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="font-playfair text-3xl font-normal text-center mb-12">Featured Galleries</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {galleryItems.map((item) => (
-            <Link href={`/gallery/${item.id}`} key={item.id} className="gallery-item group">
-              <div className="relative aspect-square overflow-hidden">
-                <Image 
-                  src={item.image} 
-                  alt={item.title} 
-                  fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="gallery-caption">
-                  <div className="text-white">
-                    <h3 className="font-playfair text-xl font-normal">{item.title}</h3>
-                    <p className="font-montserrat text-sm font-light tracking-wider">{item.category}</p>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <Link href="/galleries" className="btn btn-outline">
-            View All Galleries
-          </Link>
-        </div>
+        <FeatureGalleries />
       </section>
 
       {/* About Section */}
@@ -111,7 +46,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Instagram Feed */}
+      {/* Instagram Feed 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="font-playfair text-3xl font-normal text-center mb-12">Follow My Journey</h2>
@@ -137,7 +72,7 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </section>*/}
     </main>
   );
 }

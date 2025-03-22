@@ -4,6 +4,8 @@ import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Navigation';
+import InstagramFeed from '@/components/InstagramFeed';
+import FeatureGalleries from '@/components/FeatureGalleries';
 
 export default function About(): JSX.Element {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -92,30 +94,7 @@ export default function About(): JSX.Element {
 
       {/* Featured Work Section */}
       <section id="my-work" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-center mb-16">Featured Work</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="gallery-item rounded overflow-hidden">
-                <div className="relative aspect-square">
-                  <Image 
-                    src={`/images/gallery-${item}.jpg`} 
-                    alt={`Gallery image ${item}`}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                  <div className="gallery-caption">
-                    <h3 className="text-xl text-white mb-1">Potato in Paradise</h3>
-                    <p className="text-white opacity-80">Bali, Indonesia</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <Link href="/portfolio" className="btn">View Full Portfolio</Link>
-          </div>
-        </div>
+        <FeatureGalleries />
       </section>
 
       {/* Testimonials Section
@@ -146,10 +125,10 @@ export default function About(): JSX.Element {
         </div>
       </section> */}
 
-      {/* Instagram Feed Section */}
+      {/* Instagram Feed Section 
       <section className="py-20 bg-white">
-
-      </section>
+          <InstagramFeed />
+      </section>*/}
 
       {/* Contact CTA Section */}
       <section className="py-24 bg-gray-900 text-white">
