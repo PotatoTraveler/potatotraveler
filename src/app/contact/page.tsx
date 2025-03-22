@@ -1,53 +1,53 @@
 "use client";
 // pages/contact.tsx
-import { useState, FormEvent } from 'react';
+// import { useState, FormEvent } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
+// interface FormData {
+//   name: string;
+//   email: string;
+//   message: string;
+// }
 
 const Contact = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
+//   const [formData, setFormData] = useState<FormData>({
+//     name: '',
+//     email: '',
+//     message: '',
+//   });
+//   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+//   const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData({ ...formData, [name]: value });
+//   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+//   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
 
-    // Simulate API call - in a real app, replace with actual API call
-    try {
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
+//     // Simulate API call - in a real app, replace with actual API call
+//     try {
+//       // await fetch('/api/contact', {
+//       //   method: 'POST',
+//       //   headers: { 'Content-Type': 'application/json' },
+//       //   body: JSON.stringify(formData),
+//       // });
       
-      // Simulate delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+//       // Simulate delay
+//       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      setSubmitSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      setSubmitSuccess(false);
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+//       setSubmitSuccess(true);
+//       setFormData({ name: '', email: '', message: '' });
+//     } catch (error) {
+//       setSubmitSuccess(false);
+//       console.error('Error submitting form:', error);
+//     } finally {
+//       setIsSubmitting(false);
+//     }
+//   };
 
   return (
     <main title="Contact | Potato Traveler">
@@ -91,32 +91,66 @@ const Contact = () => {
               
               <div className="space-y-8 mt-12">
                 <div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">Based in</h3>
+                  <p className="text-gray-600">St. Louis, Missouri</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">From</h3>
+                  <p className="text-gray-600">San Jaun, Puerto Rico</p>
+                </div>
+              </div>
+            </div>
+                        {/* Left Column - Contact Info */}
+                        <div className="md:w-1/2 mb-10 md:mb-0">
+              <h1 className="text-4xl font-light mb-6 text-gray-900">Contact Information</h1>
+
+              
+              <div className="space-y-8 mt-12">
+                <div>
                   <h3 className="text-base font-semibold text-gray-900 mb-2">Email</h3>
-                  <p className="text-gray-600">hello@potatotraveler.com</p>
+                  <p className="text-gray-600">potatotraveler@gmail.com</p>
                 </div>
                 
                 <div>
                   <h3 className="text-base font-semibold text-gray-900 mb-2">Follow</h3>
                   <div className="flex space-x-4">
-                    <a href="https://instagram.com/potatotraveler" target="_blank" rel="noopener noreferrer"
+                    <a href="https://instagram.com/potato.traveler" target="_blank" rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors">
                       Instagram
                     </a>
+                    {/*
                     <a href="https://twitter.com/potatotraveler" target="_blank" rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors">
                       Twitter
-                    </a>
+                    </a>*/}
                   </div>
                 </div>
-                
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">Donate, Tip or Buy me a Coffee</h3>
+                  <div className="flex space-x-4">
+                    <a href="https://ko-fi.com/potatotraveler" target="_blank" rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900 transition-colors">
+                      Ko-fi
+                    </a>
+                    {/*
+                    <a href="https://twitter.com/potatotraveler" target="_blank" rel="noopener noreferrer"
+                      className="text-gray-600 hover:text-gray-900 transition-colors">
+                      Twitter
+                    </a>*/}
+                  </div>
+                </div>
+
                 <div>
                   <h3 className="text-base font-semibold text-gray-900 mb-2">Based in</h3>
-                  <p className="text-gray-600">Portland, Oregon</p>
+                  <p className="text-gray-600">St. Louis, Missouri</p>
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">From</h3>
+                  <p className="text-gray-600">San Jaun, Puerto Rico</p>
                 </div>
               </div>
             </div>
-            
-            {/* Right Column - Contact Form */}
+            {/* Right Column - Contact Form
             <div className="md:w-1/2">
               <form className="bg-white shadow-sm p-8 rounded-md" onSubmit={handleSubmit}>
                 <div className="mb-6">
@@ -185,8 +219,8 @@ const Contact = () => {
                     Oops! Something went wrong. Please try again later.
                   </p>
                 )}
-              </form>
-            </div>
+              </form> 
+            </div>*/}
           </div>
         </div>
       </div>

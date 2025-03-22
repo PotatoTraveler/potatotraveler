@@ -7,25 +7,27 @@ export default function Home() {
   // Gallery items with Unsplash images
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen">
-        <div className="absolute inset-0">
+
+      {/* Hero Header */}
+      <div className="relative h-150 w-full">
+        <div className="absolute inset-0 ">
           <Image 
-            src="https://images.unsplash.com/photo-1742597548273-d913136bd5cb?q=80&w=1631&auto=format&fit=crop" 
+            src="https://images.unsplash.com/photo-1672713615563-bd657947d9e9??q=80&w=1631&auto=format&fit=crop" 
             alt="Hero Image" 
             fill 
             className="object-cover"
             priority
           />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center text-white">
-          <div className="text-center">
-            <h1 className="font-playfair text-4xl md:text-6xl font-normal mb-4 tracking-wide">POTATO TRAVELER</h1>
-            <p className="font-montserrat text-xl md:text-2xl font-light tracking-wider">Capturing Moments Around the World</p>
-          </div>
+        <div className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-light tracking-wide text-white mb-4">
+          POTATO TRAVELER
+          </h1>
+          <p className="text-xl text-white text-opacity-90 max-w-xl">
+          Capturing Moments Around the World
+          </p>
         </div>
-      </section>
-
+      </div>
       {/* Gallery Section */}
       <section className="max-w-7xl mx-auto px-4 py-16">
         <FeatureGalleries />

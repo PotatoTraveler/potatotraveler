@@ -4,7 +4,7 @@ import { useState, useEffect, JSX } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Navigation';
-import FeatureGalleries from '@/components/FeatureGalleries';
+
 import PhotographyExternalLinks from '@/components/PhotographyExternalLinks';
 
 export default function About(): JSX.Element {
@@ -91,10 +91,10 @@ export default function About(): JSX.Element {
           </div>
         </div>
       </section>
-      {/* Featured Work Section */}
+      {/* Featured Work Section 
       <section id="my-work" className="py-20 bg-white">
         <FeatureGalleries />
-      </section>
+      </section>*/}
       {/* Featured Work Section */}
       <section id="my-work" className="py-20 bg-white">
         <PhotographyExternalLinks />
@@ -134,12 +134,16 @@ export default function About(): JSX.Element {
       </section>*/}
 
       {/* Contact CTA Section */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-white-900 text-black">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl mb-6">Let&apos;s Work Together</h2>
           <p className="text-xl max-w-3xl mx-auto mb-10">Interested in collaborating or licensing my work? I&apos;m available for commercial projects, travel assignments, and workshops.</p>
-          <Link href="/contact" className="btn bg-white text-gray-900 hover:bg-gray-200">Get In Touch</Link>
+
         </div>
+        <div className="container mx-auto px-4 text-center">
+        <Link href="/contact" className="btn bg-gray-100 text-white hover:bg-white-200">Get In Touch</Link>
+        </div>
+
       </section>
     </main>
   );
