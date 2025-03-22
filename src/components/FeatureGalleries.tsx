@@ -8,36 +8,42 @@ export default function FeatureGalleries() {
           id: 1, 
           title: 'Manila', 
           image: 'https://images.unsplash.com/photo-1736122094944-da4deea774ab?q=80&w=1470&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/philippines/",
           category: 'Travel' 
         },
         { 
           id: 2, 
-          title: 'Chicago', 
+          title: 'Puerto Rico', 
           image: 'https://images.unsplash.com/photo-1672713616626-53c21c1c5748?q=80&w=1473&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/puertorico/",
           category: 'Travel' 
         },
         { 
           id: 3, 
-          title: 'Mt.Fuji', 
+          title: 'Japan', 
           image: 'https://images.unsplash.com/photo-1672713616891-2036bb69a7a3?q=80&w=1374&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/japan/",
           category: 'Travel' 
         },
         { 
           id: 4, 
           title: 'New York', 
           image: 'https://images.unsplash.com/photo-1672712459037-1cbaaeecd889?q=80&w=1470&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/newyork/",
           category: 'Travel' 
         },
         { 
           id: 5, 
           title: 'Seattle', 
           image: 'https://images.unsplash.com/photo-1673465179520-03ca24ed0891?q=80&w=1470&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/newyork/",
           category: 'Travel' 
         },
         { 
           id: 6, 
           title: 'Singapore', 
           image: 'https://images.unsplash.com/photo-1736122080596-f780d47eb1e9?q=80&w=1396&auto=format&fit=crop',
+          link: "https://potatotraveler.pixieset.com/places/singapore/",
           category: 'Travel' 
         },
       ];
@@ -49,7 +55,7 @@ export default function FeatureGalleries() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {galleryItems.map((item) => (
-                    <Link href={`/gallery/${item.id}`} key={item.id} className="gallery-item group">
+                    <Link href={item.link} key={item.id} className="gallery-item group">
                         <div className="relative aspect-square overflow-hidden">
                             <Image
                                 src={item.image}
