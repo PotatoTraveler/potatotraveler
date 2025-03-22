@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Navigation';
 import FeatureGalleries from '@/components/FeatureGalleries';
+import PhotographyExternalLinks from '@/components/PhotographyExternalLinks';
 
 export default function About(): JSX.Element {
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -90,10 +91,13 @@ export default function About(): JSX.Element {
           </div>
         </div>
       </section>
-
       {/* Featured Work Section */}
       <section id="my-work" className="py-20 bg-white">
         <FeatureGalleries />
+      </section>
+      {/* Featured Work Section */}
+      <section id="my-work" className="py-20 bg-white">
+        <PhotographyExternalLinks />
       </section>
 
       {/* Testimonials Section
