@@ -43,9 +43,9 @@ export default function Navigation() {
             <Link href="/" className="font-montserrat text-sm uppercase tracking-widest hover:text-secondary transition-colors duration-300">
               Home
             </Link>
-            <Link href="/galleries" className="font-montserrat text-sm uppercase tracking-widest hover:text-secondary transition-colors duration-300">
+            {/* <Link href="/galleries" className="font-montserrat text-sm uppercase tracking-widest hover:text-secondary transition-colors duration-300">
               Galleries
-            </Link>
+            </Link> */}
             <Link href="/about" className="font-montserrat text-sm uppercase tracking-widest hover:text-secondary transition-colors duration-300">
               About
             </Link>
