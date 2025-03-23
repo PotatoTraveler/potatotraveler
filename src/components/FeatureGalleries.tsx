@@ -13,7 +13,7 @@ export default function FeatureGalleries() {
         },
         { 
           id: 2, 
-          title: 'Puerto Rico', 
+          title: 'Chicago', 
           image: 'https://images.unsplash.com/photo-1672713616626-53c21c1c5748?q=80&w=1473&auto=format&fit=crop',
           link: "https://potatotraveler.pixieset.com/places/puertorico/",
           category: 'Travel' 
