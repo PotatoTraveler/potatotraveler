@@ -96,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-base font-semibold text-gray-900 mb-2">From</h3>
-                  <p className="text-gray-600">San Jaun, Puerto Rico</p>
+                  <p className="text-gray-600">San Juan, Puerto Rico</p>
                 </div>
               </div>
             </div>
@@ -128,11 +128,11 @@ const Contact = () => {
                 <div>
                   <h3 className="text-base font-semibold text-gray-900 mb-2">Donate, Tip or Buy me a Coffee</h3>
                   <div className="flex space-x-4">
-                    <a href="https://ko-fi.com/potatotraveler" target="_blank" rel="noopener noreferrer"
+                                        {/*<a href="https://ko-fi.com/potatotraveler" target="_blank" rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors">
                       Ko-fi
                     </a>
-                    {/*
+
                     <a href="https://twitter.com/potatotraveler" target="_blank" rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors">
                       Twitter
@@ -140,14 +140,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-2">Based in</h3>
-                  <p className="text-gray-600">St. Louis, Missouri</p>
-                </div>
-                <div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-2">From</h3>
-                  <p className="text-gray-600">San Jaun, Puerto Rico</p>
-                </div>
+
               </div>
             </div>
             {/* Right Column - Contact Form
