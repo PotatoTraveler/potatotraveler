@@ -11,7 +11,6 @@ interface Photo {
   location: string;
   width: number;
   height: number;
-  orientation: 'horizontal' | 'vertical';
 }
 
 // Add this utility function at the top of the file
