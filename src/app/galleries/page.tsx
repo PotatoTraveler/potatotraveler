@@ -39,7 +39,6 @@ const generatePhotos = (count: number) => {
 
 export default function Gallery() {
   // Photo data using Unsplash images
-  const basePath = '/images/galleries/';
   const [photos] = useState<Photo[]>(generatePhotos(21));
 
   // State for the selected photo when clicked
@@ -47,12 +46,12 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   // Handle clicking on a photo
-  const handlePhotoClick = (photo: Photo) => {
-    const index = photos.findIndex(p => p.id === photo.id);
-    setCurrentIndex(index);
-    setSelectedPhoto(photo);
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-  };
+  // const handlePhotoClick = (photo: Photo) => {
+  //   const index = photos.findIndex(p => p.id === photo.id);
+  //   setCurrentIndex(index);
+  //   setSelectedPhoto(photo);
+  //   document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+  // };
 
   // Handle closing the modal
   const handleCloseModal = () => {
