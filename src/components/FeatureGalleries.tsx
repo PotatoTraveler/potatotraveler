@@ -75,7 +75,7 @@ export default function FeatureGalleries() {
             </div>
 
             <div className="mt-12 text-center">
-                <Link href="/galleries" className="btn btn-outline">
+                <Link href="https://potatotraveler.pixieset.com/" className="btn btn-outline">
                     View All Galleries
                 </Link>
             </div>
