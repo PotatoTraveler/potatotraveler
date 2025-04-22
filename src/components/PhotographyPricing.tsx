@@ -25,14 +25,14 @@ const PhotographyPricing: React.FC = () => {
         "10–12 edited high-res images",
         "Online gallery delivery",
       ],
-      description: "Ideal for headshots, quick portraits, small events"
+      description: "Ideal for headshots, quick portraits"
     },
     {
       title: "Standard Session",
       price: "$250",
       features: [
         "Up to 3 hours of shooting",
-        "30–40 edited high-res images",
+        "24–32 edited high-res images",
         "Light retouching",
         "Online gallery delivery",
       ],
@@ -47,7 +47,7 @@ const PhotographyPricing: React.FC = () => {
         "Candid and posed shots",
         "7–10 day turnaround",
       ],
-      description: ""
+      description: "ideal for small events, parties, or gatherings"
     },
     {
       title: "Full-Day Event",
@@ -112,9 +112,9 @@ const PhotographyPricing: React.FC = () => {
                 {session.description && (
                   <p className="text-gray-600 mt-4 italic text-sm">{session.description}</p>
                 )}
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md mt-6 transition-colors duration-300">
+                {/* <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md mt-6 transition-colors duration-300">
                   Book Now
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
@@ -133,18 +133,18 @@ const PhotographyPricing: React.FC = () => {
           </div>
         </div>
 
-        {/* Booking Info
+        {/* Booking Info */}
         <div className="bg-gray-800 text-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold mb-4">Booking Information</h2>
           <p className="text-gray-200">
             A 25% deposit is required to secure your date. Final payment due upon delivery of final images.
           </p>
           <div className="mt-8">
-            <button className="bg-white text-gray-800 hover:bg-gray-100 font-bold py-3 px-6 rounded-md transition-colors duration-300">
+            {/* <button className="bg-white text-gray-800 hover:bg-gray-100 font-bold py-3 px-6 rounded-md transition-colors duration-300">
               Contact Us to Book
-            </button>
+            </button> */}
           </div>
-        </div> */}
+        </div> 
       </main>
     </div>
   );
