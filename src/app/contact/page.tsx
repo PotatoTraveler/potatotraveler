@@ -1,4 +1,5 @@
 "use client";
+import PhotographyPricing from '@/components/PhotographyPricing';
 // pages/contact.tsx
 // import { useState, FormEvent } from 'react';
 import Head from 'next/head';
@@ -79,7 +80,10 @@ const Contact = () => {
 
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:space-x-10">
+        <div className="flex flex-col md:flex-row md:space-x-10">
+            <PhotographyPricing/>
+          </div>
+        <div className="flex flex-col md:flex-row md:space-x-10">
             
             {/* Left Column - Contact Info */}
             <div className="md:w-1/2 mb-10 md:mb-0">
