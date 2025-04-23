@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /private
+
+# Host
+Host: https://me.potatotraveler.com
+
+# Sitemaps
+Sitemap: https://me.potatotraveler.com/sitemap.xml
