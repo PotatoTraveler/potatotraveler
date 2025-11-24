@@ -92,8 +92,7 @@ export default function Gallery() {
     <main className="min-h-screen">
       
       <div className="min-h-screen bg-white">
-          {/* Gallery Title */}
-          <h1 className="text-5xl font-extralight text-center mb-12 tracking-wide text-gray-800">Places</h1>
+
 
           {/* Masonry Photo Grid */}
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">

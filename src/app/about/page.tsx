@@ -47,7 +47,7 @@ export default function About(): JSX.Element {
               <p className="mb-4">My journey began seven years ago when I packed a camera and a potato (my peculiar travel companion) and set off to explore the world. Since then, I&apos;ve visited over 40 countries, documenting breathtaking vistas and intimate cultural moments.</p>
               <p className="mb-6">What makes my work unique? I photograph my trusty potato in every location I visit, creating a whimsical visual diary that connects diverse landscapes through this humble root vegetable. It&apos;s become my signature — a reminder that beauty and wonder can be found everywhere, even in the most ordinary things.</p>
               <div className="flex gap-4">
-                <a href="#my-work" className="btn">View My Work</a>
+                <a href="/galleries" className="btn">View My Work</a>
                 <a href="/contact" className="btn btn-outline">Get In Touch</a>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function About(): JSX.Element {
         </div>
       </section>
 
-      {/* My Approach Section */}
+      {/* My Approach Section 
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl text-center mb-16">My Approach</h2>
@@ -90,7 +90,7 @@ export default function About(): JSX.Element {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
       {/* Featured Work Section 
       <section id="my-work" className="py-20 bg-white">
         <FeatureGalleries />
