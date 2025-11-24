@@ -15,18 +15,6 @@ const PhotographyExternalLinks: React.FC = () => {
   // Array of photography platforms with their details
   const platforms: PhotoPlatform[] = [
     {
-      name: 'GuruShots',
-      url: 'https://gurushots.com/potatotraveler/photos', // Replace with your actual profile URL
-      icon: '/icons/gurushot.png', // You'll need to create or acquire these SVG icons
-      altText: 'GuruShots Profile'
-    },
-    {
-      name: 'Pixieset',
-      url: 'https://potatotraveler.pixieset.com/', // Replace with your actual profile URL
-      icon: '/icons/pixieset.png',
-      altText: 'Pixieset Portfolio'
-    },
-    {
       name: 'Unsplash',
       url: 'https://unsplash.com/@potato_traveler', // Replace with your actual profile URL
       icon: '/icons/unsplash-brands.svg',
