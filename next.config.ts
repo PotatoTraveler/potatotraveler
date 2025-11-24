@@ -2,10 +2,23 @@ import type { NextConfig } from "next";
 
 // next.config.js
 const nextConfig = {
-  // output: 'export',
+  output: 'export',
   images: {
     unoptimized: true,
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.unsplash.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   basePath: '',
 };
