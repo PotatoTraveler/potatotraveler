@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 // next.config.js
 const nextConfig = {
-  output: 'export',
+  // output: 'export',
   images: {
     unoptimized: true,
     domains: ['images.unsplash.com', 'source.unsplash.com'],

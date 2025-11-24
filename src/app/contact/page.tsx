@@ -80,9 +80,9 @@ const Contact = () => {
 
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:space-x-10">
+          {/* <div className="flex flex-col md:flex-row md:space-x-10">
             <PhotographyPricing />
-          </div>
+          </div> */}
           <div className="flex flex-col md:flex-row md:space-x-10">
 
             {/* Left Column - Contact Info */}
@@ -121,10 +121,6 @@ const Contact = () => {
                     <a href="https://instagram.com/potato.traveler" target="_blank" rel="noopener noreferrer"
                       className="text-gray-600 hover:text-gray-900 transition-colors">
                       Instagram
-                    </a>
-                    <a href="https://twitter.com/potatotraveler" target="_blank" rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-gray-900 transition-colors">
-                      Twitter
                     </a>
                   </div>
                 </div>
