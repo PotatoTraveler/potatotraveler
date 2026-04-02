@@ -26,24 +26,31 @@ export default function About() {
                 Street &nbsp;·&nbsp; Landscape &nbsp;·&nbsp; Portrait
               </p>
               <h1 className="font-montserrat text-4xl lg:text-5xl font-extralight tracking-tight mb-8">
-                German Rivera<br />De La Torre
+                Potato<br />Traveler
               </h1>
               <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-4">
-                I&apos;m a travel photographer and storyteller from San Juan, Puerto Rico, now
-                based in St. Louis, Missouri. My work spans three disciplines I&apos;m passionate
-                about: street photography that finds the human moment in urban chaos, landscape
-                work that seeks solitude in wide open spaces, and portraiture that looks for
-                something true in a person&apos;s face.
+                I am a travel photographer and visual storyteller dedicated to capturing the world
+                through three distinct disciplines:
+              </p>
+              <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-2">
+                <span className="font-normal text-gray-700">Street Photography: </span> Finding the quiet, human moment within the pulse of urban chaos.
+              </p>
+              <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-2">
+                <span className="font-normal text-gray-700">Landscape Photography: </span>  Seeking solitude and scale in the earth&apos;s wide-open spaces.
               </p>
               <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-4">
-                My journey began seven years ago when I packed a camera and set off to explore
-                the world. Since then I&apos;ve visited over 40 countries, and I&apos;ve brought
-                along a peculiar travel companion — a potato — to every location I shoot.
-                It&apos;s become my signature: a reminder that wonder can be found in ordinary things.
+                <span className="font-normal text-gray-700">Portraiture: </span> Looking past the surface to find something authentic and true in a person&apos;s face.
+              </p>
+              <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-6">
+                My work is driven by the belief that every journey holds a story worth telling,
+                whether it&apos;s found in the heart of a crowded city or the stillness of a remote horizon.
+              </p>
+              <p className="font-montserrat text-xs uppercase tracking-[0.25em] text-gray-400 mb-2">
+                Inquiries &amp; Collaborations
               </p>
               <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-10">
-                Interested in collaborating or licensing my work? I&apos;m available for commercial
-                projects, travel assignments, and workshops.
+                Available for commercial projects, global travel assignments, and photography
+                workshops. Let&apos;s tell a story together.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/galleries" className="btn">View Work</Link>
