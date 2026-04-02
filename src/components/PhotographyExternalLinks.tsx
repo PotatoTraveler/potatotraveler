@@ -1,69 +1,56 @@
-import React from 'react';
+// components/PhotographyExternalLinks.tsx
 import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 
-// Define types for our photography platforms
 type PhotoPlatform = {
   name: string;
   url: string;
   icon: string;
-  altText: string;
+  description: string;
 };
 
-const PhotographyExternalLinks: React.FC = () => {
-  // Array of photography platforms with their details
-  const platforms: PhotoPlatform[] = [
-    {
-      name: 'Unsplash',
-      url: 'https://unsplash.com/@potato_traveler', // Replace with your actual profile URL
-      icon: '/icons/unsplash-brands.svg',
-      altText: 'Unsplash Collection'
-    },
-    // You can add more platforms here as needed
-  ];
+const platforms: PhotoPlatform[] = [
+  {
+    name: 'Pixieset',
+    url: 'https://potatotraveler.pixieset.com/',
+    icon: '/icons/unsplash-brands.svg',
+    description: 'Full portfolio galleries',
+  },
+  {
+    name: 'Unsplash',
+    url: 'https://unsplash.com/@potato_traveler',
+    icon: '/icons/unsplash-brands.svg',
+    description: 'Free downloads on Unsplash',
+  },
+];
 
+export default function PhotographyExternalLinks() {
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">My Work Around the Web</h2>
-        
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Explore my photography across various platforms. Each site showcases different aspects of my work.
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {platforms.map((platform) => (
-            <Link 
-              href={platform.url} 
-              key={platform.name}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-            >
-              <div className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
-                <div className="relative w-16 h-16 mb-4">
-                  <Image
-                    src={platform.icon}
-                    alt={platform.altText}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-2 flex items-center">
-                  {platform.name}
-                  <ExternalLink className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                </h3>
-                
-                <p className="text-gray-500 text-center">View my work on {platform.name}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p className="font-montserrat text-xs uppercase tracking-[0.25em] text-gray-400 text-center mb-10">
+        Also on
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {platforms.map((platform) => (
+          <Link
+            key={platform.name}
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 border border-gray-100 p-6 hover:border-gray-300 transition-colors duration-300"
+          >
+            <div className="relative w-8 h-8 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity">
+              <Image src={platform.icon} alt={platform.name} fill className="object-contain" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="font-montserrat text-sm font-light">{platform.name}</p>
+              <p className="font-montserrat text-xs text-gray-400">{platform.description}</p>
+            </div>
+            <ExternalLink className="w-3.5 h-3.5 text-gray-300 group-hover:text-gray-500 transition-colors shrink-0" />
+          </Link>
+        ))}
       </div>
-    </section>
+    </div>
   );
-};
-
-export default PhotographyExternalLinks;
+}

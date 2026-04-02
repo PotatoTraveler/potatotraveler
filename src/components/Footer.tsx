@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <Link href="/" className="font-playfair text-xl tracking-wide">
-              POTATO TRAVELER
+            <Link href="/" className="font-montserrat text-sm font-light tracking-[0.2em] uppercase">
+              Potato Traveler
             </Link>
           </div>
           
@@ -42,11 +42,14 @@ export default function Footer() {
             </div>
             
             <div className="flex space-x-6">
-              <Link href="/privacy" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
-                Privacy Policy
+              <Link href="/work/street" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
+                Street
               </Link>
-              <Link href="/terms" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
-                Terms of Service
+              <Link href="/work/landscape" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
+                Landscape
+              </Link>
+              <Link href="/work/portrait" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
+                Portrait
               </Link>
               <Link href="/contact" className="font-montserrat text-xs text-secondary hover:text-primary transition-colors duration-300">
                 Contact

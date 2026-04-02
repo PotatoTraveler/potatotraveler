@@ -4,77 +4,63 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
-  // Gallery items with Unsplash images
   return (
     <main className="min-h-screen">
 
-      {/* Hero Header */}
-      <div className="relative h-150 w-full">
-        <div className="absolute inset-0 ">
-          <Image 
-            src="https://images.unsplash.com/photo-1672713615563-bd657947d9e9??q=80&w=1631&auto=format&fit=crop" 
-            alt="Hero Image" 
-            fill 
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div className="relative h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-light tracking-wide text-white mb-4">
-          POTATO TRAVELER
-          </h1>
-          <p className="text-xl text-white text-opacity-90 max-w-xl">
-          Capturing Moments Around the World
+      {/* Full-screen Hero */}
+      <div className="relative h-screen w-full">
+        <Image
+          src="https://images.unsplash.com/photo-1672713615563-bd657947d9e9?q=80&w=1631&auto=format&fit=crop"
+          alt="Hero photograph"
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/50" />
+
+        {/* Centered text */}
+        <div className="relative h-full flex flex-col justify-center items-center text-center px-4">
+          <p className="font-montserrat text-xs uppercase tracking-[0.35em] text-white/70 mb-6">
+            Street &nbsp;·&nbsp; Landscape &nbsp;·&nbsp; Portrait
           </p>
+          <h1 className="font-montserrat text-5xl sm:text-6xl lg:text-7xl font-extralight tracking-[0.12em] text-white uppercase mb-8">
+            Potato Traveler
+          </h1>
+          <Link href="/galleries" className="btn-white btn">
+            View Work
+          </Link>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+          <span className="font-montserrat text-xs uppercase tracking-widest">Scroll</span>
+          <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </div>
-      {/* Gallery Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
+
+      {/* Genre Galleries */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <FeatureGalleries />
       </section>
 
       {/* About Section */}
-      <section className="bg-light py-16">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="font-playfair text-3xl font-normal mb-8">About Me</h2>
-          <p className="font-montserrat text-lg font-light mb-8">
-            I&apos;m a passionate photographer who loves to capture the beauty of our world. 
-            From bustling city streets to serene natural landscapes, I&apos;m always on the lookout 
-            for that perfect shot that tells a story.
+      <section className="bg-[#f8f8f8] py-24">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <h2 className="font-montserrat text-3xl font-extralight tracking-wide mb-6">About Me</h2>
+          <p className="font-montserrat text-base font-light text-gray-600 leading-relaxed mb-10">
+            I&apos;m German Rivera De La Torre — a travel photographer from Puerto Rico, now based in
+            St. Louis. I specialize in street, landscape, and portrait photography, having explored
+            over 40 countries with a camera and an unlikely companion.
           </p>
           <Link href="/about" className="btn btn-outline">
             Learn More
           </Link>
         </div>
       </section>
-      
-      {/* Instagram Feed 
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="font-playfair text-3xl font-normal text-center mb-12">Follow My Journey</h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" key={item} className="block aspect-square overflow-hidden group">
-                <div className="relative h-full w-full">
-                  <Image 
-                    src={`https://source.unsplash.com/random/300x300?travel,${item}`} 
-                    alt={`Instagram Post ${item}`} 
-                    fill 
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-              </a>
-            ))}
-          </div>
-          
-          <div className="mt-12 text-center">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="font-montserrat text-sm uppercase tracking-wider hover:text-secondary">
-              @potatotraveler
-            </a>
-          </div>
-        </div>
-      </section>*/}
+
     </main>
   );
 }
